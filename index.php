@@ -2,8 +2,8 @@
 session_start();
 require_once('tumblroauth/tumblroauth.php');
 
-$consumer_key = "InX4htB6aWBNaRlqUdlCUaA6l0fNLDzb0UPMEYPxfACSXraANO";
-$consumer_secret = "4l0R3otgbwFLu6Qj5DgmZbRkvElr1YbgVojsv19pRimTxykJFx";
+$consumer_key = ""; //your consumer key
+$consumer_secret = ""; //your secret key
 
 $oauth_token = $_COOKIE['o_token_2222'];
 $oauth_token_secret = $_COOKIE['o_token_secret_2222'];

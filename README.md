@@ -9,7 +9,7 @@ the intention is so that those who would like to create something with the tumbl
 
 also, i'm having a hard time getting bugfixes done. any help with cleaning up my gross code and fixing little bugs and helping me implement a couple of feature requests is welcomed, and immensely appreciated. any feedback on my code from those who have been doing this longer than i have is also welcomed. thank you for your time.
 
-current issues:
+## current issues: ##
 - support for ask posts (important, but not a personal priority- mostly because i have no idea why ask posts won't come up in the api calls)
 - replaces partially matched tags- for instance, if you go to replace the tag "gpoy" with "selfie", it will not only do what it's supposed to, but replace the string "gpoy" in any tags that contain it, turing "gpoy with cat" into "selfie with cat". sometimes this is desired but often not, so an option to replace exact full strings only needs to be added.
 - you can replace one tag with multiple tags, but not find posts tagged with multiple tags. this is a tumblr api limitation but can be worked around.
