@@ -8,7 +8,6 @@ $consumer_key = "YOUR CONSUMER KEY GOES HERE";
 $consumer_secret = "PUT THE SECRET KEY HERE";
 $oauth_token = 'YOUR oauth_token FROM callback.php RESPONSE GOES HERE';
 $oauth_token_secret = 'YOUR oauth_token_secret FROM callback.php RESPONSE GOES HERE';
-$base_hostname = 'YOUR TUMBLR BLOG URL GOES HERE';
 
 //posting URI - http://www.tumblr.com/docs/en/api/v2#posting
 $post_URI = 'http://api.tumblr.com/v2/blog/'.$base_hostname.'/post';

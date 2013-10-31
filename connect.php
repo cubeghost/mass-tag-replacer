@@ -8,8 +8,8 @@ session_start();
 require_once('tumblroauth/tumblroauth.php');
 
 // Define the needed keys
-$consumer_key = "InX4htB6aWBNaRlqUdlCUaA6l0fNLDzb0UPMEYPxfACSXraANO";
-$consumer_secret = "4l0R3otgbwFLu6Qj5DgmZbRkvElr1YbgVojsv19pRimTxykJFx";
+$consumer_key = ""; //your consumer key
+$consumer_secret = ""; //your secret key
 
 // The callback URL is the script that gets called after the user authenticates with tumblr
 // In this example, it would be the included callback.php
