@@ -1,0 +1,6 @@
+<section class="column right">
+	<h3>bugs</h3>
+		<p>parentheses (), brackets [], ampersands (&), and potentially other special characters are unsupported, and may break your tags.</p>
+		<p>ask posts don't work. sorry about that.</p>
+		<p>leaving either the find or replace fields blank has really unpredictable results- i wouldn't reccomend doing it. be very careful! double check everything before you press go.</p>
+</section>

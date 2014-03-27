@@ -1,0 +1,6 @@
+<section class="column left">
+	<h3>instructions</h3>
+		<p>figure out the tag you want to find and the tag you want to replace it with. think carefully, mistakes are hard to undo!</p>
+		<p>when entering tags, leave out the #, and be mindful of special characters. to replace with multiple tags, (or <b>add tags</b>) just separate with commas.</p>
+		<p>with large batches, this won't always catch every post on the first try- you may need to repeat it a couple times before it gets everything. this is normal!</p>
+</section>

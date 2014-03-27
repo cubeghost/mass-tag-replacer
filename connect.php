@@ -8,12 +8,12 @@ session_start();
 require_once('tumblroauth/tumblroauth.php');
 
 // Define the needed keys
-$consumer_key = ""; //your consumer key
-$consumer_secret = ""; //your secret key
+$consumer_key = "InX4htB6aWBNaRlqUdlCUaA6l0fNLDzb0UPMEYPxfACSXraANO";
+$consumer_secret = "4l0R3otgbwFLu6Qj5DgmZbRkvElr1YbgVojsv19pRimTxykJFx";
 
 // The callback URL is the script that gets called after the user authenticates with tumblr
 // In this example, it would be the included callback.php
-$callback_url = "http://dev.goose.im/tags/callback.php";
+$callback_url = "http://tags.goose.im/callback.php";
 
 // Let's begin.  First we need a Request Token.  The request token is required to send the user
 // to Tumblr's login page.
@@ -23,7 +23,7 @@ $callback_url = "http://dev.goose.im/tags/callback.php";
 $tum_oauth = new TumblrOAuth($consumer_key, $consumer_secret);
 
 // Ask Tumblr for a Request Token.  Specify the Callback URL here too (although this should be optional)
-$request_token = $tum_oauth->getRequestToken($callback_url);
+$request_token = $tum_oauth->getRequestToken('http://tags.goose.im/callback.php');
 
 // Store the request token and Request Token Secret as out callback.php script will need this
 $_SESSION['request_token'] = $token = $request_token['oauth_token'];

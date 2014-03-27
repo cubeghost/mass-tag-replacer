@@ -4,8 +4,8 @@ session_start();
 require_once('tumblroauth/tumblroauth.php');
 
 // Define the needed keys
-$consumer_key = ""; //your consumer key
-$consumer_secret = ""; //your secret key
+$consumer_key = "InX4htB6aWBNaRlqUdlCUaA6l0fNLDzb0UPMEYPxfACSXraANO";
+$consumer_secret = "4l0R3otgbwFLu6Qj5DgmZbRkvElr1YbgVojsv19pRimTxykJFx";
 
 // Once the user approves your app at Tumblr, they are sent back to this script.
 // This script is passed two parameters in the URL, oauth_token (our Request Token)
@@ -17,17 +17,24 @@ $consumer_secret = ""; //your secret key
 $tum_oauth = new TumblrOAuth($consumer_key, $consumer_secret, $_SESSION['request_token'], $_SESSION['request_token_secret']);
 
 // Ok, let's get an Access Token. We'll need to pass along our oauth_verifier which was given to us in the URL. 
+
 $access_token = $tum_oauth->getAccessToken($_REQUEST['oauth_verifier']);
 
 // We're done with the Request Token and Secret so let's remove those.
 unset($_SESSION['request_token']);
 unset($_SESSION['request_token_secret']);
 
+
+//echo "oauth_token: ".$access_token['oauth_token']."<br>oauth_token_secret: ".$access_token['oauth_token_secret']."<br><br>"; //print the access token and secret for later use
+
+
 // Make sure nothing went wrong.
 if (200 == $tum_oauth->http_code) {
   // good to go
 } else {
-  die('Unable to authenticate');
+	//print_r($tum_oauth->http_info);
+	//echo('<br><br>timestamp: ' . time());
+	die('<br><br>Unable to authenticate: ' . $tum_oauth->http_code);
 }
 
 //echo "oauth_token: ".$access_token['oauth_token']."<br>oauth_token_secret: ".$access_token['oauth_token_secret']."<br><br>"; //print the access token and secret for later use
@@ -35,7 +42,7 @@ if (200 == $tum_oauth->http_code) {
 setcookie("o_token_2222", $access_token['oauth_token']);
 setcookie("o_token_secret_2222", $access_token['oauth_token_secret']);
 
-header('Location: http://dev.goose.im/tags/');
+header('Location: http://tags.goose.im/');
 
 /*
 // What's next?  Now that we have an Access Token and Secret, we can make an API call.

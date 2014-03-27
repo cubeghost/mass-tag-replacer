@@ -1,0 +1,8 @@
+<center><h1>mass tag replacer</h1>
+				<p class="front">need to replace the tag you made for selfies in 2009 with something less embarrassing? a character's name changed in canon and now you have to update your tag? this is the place.</p> 
+				<p class="front">takes all the posts on your blog tagged with one thing and replaces that tag with another tag. isn't that neat?</p>
+				<p><a href="connect.php" class="button">connect to tumblr</a></p></center>
+				
+			<!--edit march 22 2014, changed "log in with tumblr" to "connect to tumblr" because literally everyone is incompetent and fearmongering and does not understand anything -->
+			
+			<p class="footer">in active beta since october 2013. special thanks to pretty much everyone.</p>

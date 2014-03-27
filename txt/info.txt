@@ -1,0 +1,10 @@
+<h3>info</h3>
+<section class="column left">
+<p>for probably two years people had been asking tumblr for a feature to replace tags on a mass scale. I did some research and figured out, in theory, how to do it, but being in school and dealing with health issues put it on the backburner- not to mention that I knew the feature was in the works in a popular browser extension at the time. but on a friday night in october 2013 it became clear to me that if I didn't do it, nobody else was going to do it, and also I was really fed up with my old selfie tag. so I busted this out in a couple hours, and released it into the world in all its buggy, inconsistent glory.</p>
+<p>I am so grateful for every thankful message I get, and every panicked bug report, and every single story of how this helped you- whether it was changing "cecil baldwin" to "cecil palmer", or throwing a creepy ex off your trail. thank you! and you're welcome.</p></section>
+
+<section class="column right">
+<p>but alas! there are still bugs to be fixed, and mysteries to be answered (where are ask posts being lost in the void?), and hosting to be paid for- I can use all the help I can get.</p>
+<p>this project is on github, and I welcome any and all code contributions.</p>
+<p>if you have an idea but don't have time to fork the code and work it in, you can email me at hello@goose.im.</p>
+<p>and lastly- web hosting is expensive, and it takes a lot out of my budget- if you'd like to show some gratitude in the form of cold hard cash, hit me up at paypal@goose.im.</p></section>

@@ -7,8 +7,8 @@ $postID = $_POST['postID'];
 $tags = stripslashes($_POST['tags']);
 
 	
-$consumer_key = ""; //your consumer key
-$consumer_secret = ""; //your secret key
+$consumer_key = "InX4htB6aWBNaRlqUdlCUaA6l0fNLDzb0UPMEYPxfACSXraANO";
+$consumer_secret = "4l0R3otgbwFLu6Qj5DgmZbRkvElr1YbgVojsv19pRimTxykJFx";
 
 $oauth_token = $_COOKIE['o_token_2222'];
 $oauth_token_secret = $_COOKIE['o_token_secret_2222'];
