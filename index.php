@@ -240,6 +240,7 @@ if ($handle = opendir('./txt/')) {
 	section.big .button {font-size:1em;padding:12px;margin-bottom:0;margin-top:20px;}
 	.clear {display:block;clear:both;}
 	p.footer {opacity:0.7;font-size:12px;position:absolute;bottom:10px;left:50%;text-indent:-215px;}
+    section.alert {width:920px;margin:50px auto 30px auto;border:2px #fff solid;border-radius:8px;padding:30px;font-size:1.2em;}
 	</style>
 	
 </head>
@@ -259,6 +260,7 @@ if ($handle = opendir('./txt/')) {
 								<a href="clearcookie.php">log out</a>
 							</section>
 						</header>
+                        <section class="alert">IMPORTANT UPDATE: This now works on ask posts, however, <i><b>it will delete the original answer to the ask</b></i>. Please be careful about what tags you replace for now- until this is fixed, use the xkit version if your tag contains ask posts.</section>
 						<section class="center big important">';
 						echo $txt['instructions.txt'];
 						echo $txt['bugs.txt'];
