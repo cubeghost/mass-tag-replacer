@@ -121,9 +121,9 @@ if ($handle = opendir('./txt/')) {
 					var currentTags = this['tags'];
 					$('#postids').append(postID+'('+currentTags+'), ');
 					currentTags = currentTags.join();
-					//var newTags = currentTags.replace('<?=$tagIn;?>','<?=$tagOut;?>')
-					var pattern = new RegExp('<?=$tagIn;?>', 'gi');
-					var newTags = currentTags.replace(pattern, '<?=$tagOut;?>');
+					//var newTags = currentTags.replace('<? echo addslashes($tagIn); ?>','<? echo addslashes($tagOut); ?>')
+					var pattern = new RegExp('<? echo addslashes($tagIn); ?>', 'gi');
+					var newTags = currentTags.replace(pattern, '<? echo addslashes($tagOut); ?>');
 					newTags = newTags.replace(/\\/g, '');
 					console.log('replacing '+currentTags+' with '+newTags+'...');
 					$.ajax({
