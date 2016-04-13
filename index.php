@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require_once('tumblroauth/tumblroauth.php');
 
@@ -11,7 +11,7 @@ $oauth_token_secret = $_COOKIE['o_token_secret_2222'];
 $blog = $_POST['blog'];
 $tagIn = $_POST['tagIn'];
 $tagOut = $_POST['tagOut'];
-	
+
 $api_call_base = 'http://api.tumblr.com/v2/blog/' . $blog . '.tumblr.com/posts?api_key=' . $consumer_key . '&tag=' . $tagIn;
 
 $api_edit_base = 'http://api.tumblr.com/v2/blog/' . $blog . '.tumblr.com/post/edit/';
@@ -35,20 +35,20 @@ if ($handle = opendir('./txt/')) {
 <head>
 	<title>mass tag replacer</title>
 	<meta name="description" content="a mass tag replacer/editor for tumblr- takes every post on your blog tagged with one tag and replaces that tag with another.">
-	
+
 	<link href="tagreplaceicon.png" rel="icon" type="image/png" />
-	
+
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.cookie.js"></script>
-	
-	
+
+
 	<script type="text/javascript">
 	$(document).ready(function(){
-	
+
 	$('header h2').click(function(){
 		window.location='/';
 	});
-	
+
 	var showcookie = $.cookie('showImportantThings');
 	if (showcookie == 'no') {
 		$('.ok').hide();
@@ -56,7 +56,7 @@ if ($handle = opendir('./txt/')) {
 		$('section.important').show();
 		$('section.important').css({'opacity':1});
 	}
-	
+
 	$('#important').click(function(){
         var section = $("section.important")
         if(section.is(':visible')){
@@ -93,8 +93,8 @@ if ($handle = opendir('./txt/')) {
 
         event.preventDefault();
 	});
-	
-	
+
+
 	var j;
 
 	jsonpcallback = function(data) {
@@ -102,19 +102,19 @@ if ($handle = opendir('./txt/')) {
 		j = data.response['total_posts'];
 		j = j / 20;
 		j = Math.round(j);
-		
+
 		console.log('total posts: '+data.response['total_posts']);
-		
+
 		i = 0;
-		
+
 //		for (i=0;i<j;i++) {
 		function f() {
-		setTimeout(function() { 
+		setTimeout(function() {
 
 			var n = i * 20;
-									
+
 			var apiplus = "<?=$api_call_base;?>&offset=" + n;
-						
+
 			innerjsonp = function(data) {
 				$.each(data.response.posts, function(i,post){
 					var postID = this['id']; //
@@ -134,12 +134,12 @@ if ($handle = opendir('./txt/')) {
 							postID: postID,
 							tags: newTags
 						}
-					});				
+					});
 				});
-			
+
 			}
-			
-			
+
+
 			$.ajax({
 				type: "GET",
 				url: apiplus,
@@ -148,20 +148,20 @@ if ($handle = opendir('./txt/')) {
 					jsonp: "innerjsonp"
 				}
 			});
-			
+
 			i++
-		
+
 		if (i<j) {f();}
 
-		},1500)		
+		},1500)
 		}
-		
+
 		f();
-		
-			
+
+
 	}
-			
-	
+
+
 	$.ajax({
 		type: "GET",
 		url: "<?=$api_call_base;?>",
@@ -172,12 +172,12 @@ if ($handle = opendir('./txt/')) {
 	});
 
 
-      
+
 });
 
 
 	</script>
-	
+
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 	* {margin:0;border:0;padding:0;}
@@ -190,7 +190,7 @@ if ($handle = opendir('./txt/')) {
 		background: -ms-linear-gradient(top, #30c6e2 0%,#ffa9c9 100%); /* IE10+ */
 		background-attachment:fixed;
 		font-family:'Open Sans',Helvetica,sans-serif;
-		padding:0;	
+		padding:0;
 		color:#fff;
 		font-weight:300;
 		letter-spacing:0.2px;
@@ -242,14 +242,14 @@ if ($handle = opendir('./txt/')) {
 	p.footer {opacity:0.7;font-size:12px;position:absolute;bottom:10px;left:50%;text-indent:-215px;}
     section.alert {width:920px;margin:50px auto 30px auto;border:2px #fff solid;border-radius:8px;padding:30px;font-size:1.2em;}
 	</style>
-	
+
 </head>
 
 <body>
 	<div class="alpha">
 		<?php
 			if (empty($oauth_token)) {
-				echo $txt['front.txt'];				
+				echo $txt['front.txt'];
 
 			} else {
 				echo '<header>
@@ -260,6 +260,10 @@ if ($handle = opendir('./txt/')) {
 								<a href="clearcookie.php">log out</a>
 							</section>
 						</header>
+            <section class="alert">
+              <b>important note:</b> due to a tumblr api bug, using this <i>may</i> delete any captions you\'ve added to reblogged posts.
+              for now, if this is a concern, please use the xkit version.
+            </section>
 						<section class="center big important">';
 						echo $txt['instructions.txt'];
 						echo $txt['bugs.txt'];
@@ -268,7 +272,7 @@ if ($handle = opendir('./txt/')) {
 						</section>
 						<section class="center big info">';
 						echo $txt['info.txt'];
-						echo '<span class="clear"></section> 
+						echo '<span class="clear"></section>
 						<section class="form center">
 						<form name="opt" id="opt" action="http://tags.goose.im/" method="POST">
 							<section class="row top">
