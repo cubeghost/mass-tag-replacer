@@ -260,10 +260,6 @@ if ($handle = opendir('./txt/')) {
 								<a href="clearcookie.php">log out</a>
 							</section>
 						</header>
-            <section class="alert">
-              <b>important note:</b> due to a tumblr api bug, using this <i>may</i> delete any captions you\'ve added to reblogged posts.
-              for now, if this is a concern, please use the xkit version.
-            </section>
 						<section class="center big important">';
 						echo $txt['instructions.txt'];
 						echo $txt['bugs.txt'];
