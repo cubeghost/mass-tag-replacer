@@ -1,3 +1,5 @@
+# moved, now at [cubeghost/tagreplacer](https://github.com/cubeghost/tagreplacer)
+
 # mass tag replacer
 
 http://tags.goose.im/
